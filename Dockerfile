@@ -9,10 +9,10 @@ RUN	echo "Etc/UTC" > /etc/localtime && \
 	apt update && \
 	apt -y install wget python && \
 	cd ~ && \
-	wget https://nodejs.org/download/release/v$NODE_VER/node-v$NODE_VER-linux-x64.tar.gz && \
-	tar xf node-v$NODE_VER-linux-x64.tar.gz && \
-	rm node-v$NODE_VER-linux-x64.tar.gz && \
-	mv node-v$NODE_VER-linux-x64 /opt/node
+	wget https://nodejs.org/download/release/v$NODE_VER/node-v$NODE_VER-linux-arm64.tar.gz && \
+	tar xf node-v$NODE_VER-linux-arm64.tar.gz && \
+	rm node-v$NODE_VER-linux-arm64.tar.gz && \
+	mv node-v$NODE_VER-linux-arm64 /opt/node
 
 # Install jemalloc
 ENV JE_VER="5.2.1"
